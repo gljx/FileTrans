@@ -18,6 +18,7 @@ Dialog::Dialog(QWidget *parent) :
     port->setBaudRate(QSerialPort::Baud1200);
     this->setAcceptDrops(true);
     ui->setupUi(this);
+    this->setWindowTitle("串口文件发送工具Ver1.0-高刘觉曦版权所有!");
     ui->baudrate->addItems(baudlist);
     connect(ui->SendBtn,SIGNAL(clicked(bool)),this,SLOT(onSendClicked()));
     connect(ui->clean,SIGNAL(clicked(bool)),this,SLOT(cleanFile()));
